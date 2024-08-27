@@ -2,3 +2,5 @@ streamlit
 plotly
 mixpanel
 numpy
+matplotlib
+pandas
