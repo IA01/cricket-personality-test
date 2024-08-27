@@ -352,13 +352,13 @@ def main():
         }
         </style>
         """, unsafe_allow_html=True)
-        
-          answer = st.select_slider(
-            "",
-            options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
-            value="Neutral",
-            key=f"slider_{st.session_state.current_question}"
-        )
+answer = st.select_slider(
+    "",
+    options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+    value="Neutral",
+    key=f"slider_{st.session_state.current_question}"
+)        
+       
         
         # Add Next button at the center
         # This code creates a centered button for navigating through the quiz
