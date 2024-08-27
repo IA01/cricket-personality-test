@@ -350,6 +350,23 @@ def main():
             font-size: 1.1rem !important;
             font-weight: 500 !important;
         }
+
+          .stSlider [data-testid="stTickBar"] {
+            display: flex;
+            justify-content: space-between;
+        }
+        .stSlider [data-testid="stTickBarMin"] {
+            width: auto !important;
+            position: static !important;
+            transform: none !important;
+        }
+        .stSlider [data-testid="stTickBarMax"] {
+            width: auto !important;
+            position: static !important;
+            transform: none !important;
+            }
+        </style>
+""", unsafe_allow_html=True)
         </style>
         """, unsafe_allow_html=True)
         
