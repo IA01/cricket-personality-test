@@ -310,8 +310,6 @@ def calculate_user_profile(user_answers):
             profile[attr] = round(profile[attr] / question_count[attr], 2)
         else:
             del profile[attr]  # Remove attributes that weren't used
-        
-        print(f"Debug - Attribute: {attr}, Score: {profile.get(attr, 'N/A')}")  # Debug print
 
     return profile
 
@@ -355,10 +353,12 @@ def main():
         </style>
         """, unsafe_allow_html=True)
         
-        answer = st.select_slider("", 
-                                  options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
-                                  value="Neutral",
-                                  key=f"slider_{st.session_state.current_question}")
+          answer = st.select_slider(
+            "",
+            options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+            value="Neutral",
+            key=f"slider_{st.session_state.current_question}"
+        )
         
         # Add Next button at the center
         # This code creates a centered button for navigating through the quiz
